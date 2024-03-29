@@ -54,8 +54,6 @@ export const CLASS_NAMES = {
     CUTLERY: 'main__content--cutlery-btn',
 }
 
-export const PARENT_CLASSES = ['main__content--plate', 'main__content--knife', 'main__content--fork', 'main__content--snackHight', 'main__content--snackMiddle', 'main__content--snackLower'];
-export const CHILD_CLASSES = ['main__content--dish', 'main__content--imgFork', 'main__content--imgKnife', 'main__content--snackHight-img', 'main__content--imgSnackMiddle-img', 'main__content--snackLower-img'];
 
 export const DISHES_SRC = {
     imgs: [...dishesImgSrcList],
@@ -72,30 +70,30 @@ export const CUTLERY_SRC = {
 
 export const INITIAN_CONTENT = {
     plate: {
-        childSrc: './assets/img/dish/dish_3.svg',
+        childSrc: './assets/img/plate/Default_Plate.svg',
         parent: null,
     },
     cutleries: {
         first: {
-            childSrc: './assets/img/cutlery/fork/black_Fork.svg',
+            childSrc: './assets/img/cutlery/fork/Default_Fork.svg',
             parent: null,
         },
         second:  {
-            childSrc: './assets/img/cutlery/knife/black_Knife.svg',
+            childSrc: './assets/img/cutlery/knife/Default_Knife.svg',
             parent: null,
         },
     },
     snacks: {
         first: {
-            childSrc: './assets/img/snacks/fruits/fruit_2.svg',
+            childSrc: './assets/img/snacks/fruits/Default_fruit.svg',
             parent: null,
         },
         second: {
-            childSrc: './assets/img/snacks/leafs/leaf_2.svg',
+            childSrc: './assets/img/snacks/leafs/Default_leaf.svg',
             parent: null,
         },
         third: {
-            childSrc: './assets/img/snacks/fruits/fruit_2.svg',
+            childSrc: './assets/img/snacks/fruits/Default_fruit.svg',
             parent: null,
         },
     },

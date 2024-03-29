@@ -9,6 +9,9 @@ export const modalEvent = (parant, className, modal, itemList, srcList, content)
             modal.classList.remove('hidden');
         }
 
+        console.log(parant.classList, parant)
+
+
         if (openParant === parant) {
             deleteImages(parant, className, itemList);
             openParant = null;
@@ -38,5 +41,7 @@ const addImages = (parant, className, modalList, imgsSrcList) => {
 }
 
 const onOpenAndCloseModalEvent = (item, src) => {
+    console.log(item);
+    item.classList.remove("pulsating-element")
     item.childNodes[1].src = src;
 }

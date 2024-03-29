@@ -18,9 +18,14 @@ export const createLiElement = (parant, className, src, type) => {
     return li;
 }
 
-export const createImgElement = (parant, className, src) => {
+export const createImgElement = (parant, className, src, type) => {
     let img = document.createElement("img");
     img.setAttribute('class', className);
     img.setAttribute('src',  src);
+    parant.classList.add('pulsating-element')
+
+    if (type === "GENERATE") {
+        parant.classList.remove('pulsating-element')
+    }
     parant.appendChild(img);
 }

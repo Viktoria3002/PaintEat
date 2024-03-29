@@ -2,7 +2,7 @@ import { DISHES_SRC, SNACKS_SRC, CUTLERY_SRC, INITIAN_CONTENT } from './constant
 import { createImgElement } from './creaters.js';
 
 
-export const generationContent = (content) => {
+export const generationContent = (content, type) => {
     const {plate, cutleries, snacks} = content;
 
     plate.parent = document.getElementsByClassName('main__content--plate');
@@ -13,17 +13,17 @@ export const generationContent = (content) => {
     snacks.third.parent = document.getElementsByClassName('main__content--snackLower');
 
 
-    createImgElement(plate.parent[0], 'main__content--dish', plate.childSrc);
-    createImgElement(cutleries.first.parent[0], 'main__content--imgFork', cutleries.first.childSrc);
-    createImgElement(cutleries.second.parent[0], 'main__content--imgKnife', cutleries.second.childSrc);
-    createImgElement(snacks.first.parent[0], 'main__content--snackHight-img', snacks.first.childSrc);
-    createImgElement(snacks.second.parent[0], 'main__content--imgSnackMiddle-img', snacks.second.childSrc);
-    createImgElement(snacks.third.parent[0], 'main__content--snackLower-img', snacks.third.childSrc);
+    createImgElement(plate.parent[0], 'main__content--dish', plate.childSrc, type);
+    createImgElement(cutleries.first.parent[0], 'main__content--imgFork', cutleries.first.childSrc, type);
+    createImgElement(cutleries.second.parent[0], 'main__content--imgKnife', cutleries.second.childSrc, type);
+    createImgElement(snacks.first.parent[0], 'main__content--snackHight-img', snacks.first.childSrc, type);
+    createImgElement(snacks.second.parent[0], 'main__content--imgSnackMiddle-img', snacks.second.childSrc, type);
+    createImgElement(snacks.third.parent[0], 'main__content--snackLower-img', snacks.third.childSrc, type);
 }
 
 export const resetInitialContent = (content) => {
     cleanField(content);
-    generationContent(INITIAN_CONTENT);
+    generationContent(INITIAN_CONTENT, 'RESET');
 }
 
 export const generationRandomContent = (content) => {
@@ -35,8 +35,7 @@ export const generationRandomContent = (content) => {
     snacks.first.childSrc = selectRandomString(SNACKS_SRC.imgs);
     snacks.second.childSrc = selectRandomString(SNACKS_SRC.imgs);
     snacks.third.childSrc = selectRandomString(SNACKS_SRC.imgs);
-    console.log(content, 'content');
-    generationContent(content)
+    generationContent(content, 'GENERATE')
 }
 
 export const generationRandomBtnEvent = (content) => {
