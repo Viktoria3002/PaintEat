@@ -19,3 +19,24 @@ export const generationContent = (content) => {
     createImgElement(snacks.second.parent[0], 'main__content--imgSnackMiddle-img', snacks.second.childSrc);
     createImgElement(snacks.third.parent[0], 'main__content--snackLower-img', snacks.third.childSrc);
 }
+
+export const resetInitialContent = (content, initialContent) => {
+    const {plate, cutleries, snacks} = content;
+
+    document.getElementsByClassName('main__content--plate')[0].removeChild(plate.parent[0].lastElementChild);
+    document.getElementsByClassName('main__content--knife')[0].removeChild(cutleries.first.parent[0].lastElementChild);
+    document.getElementsByClassName('main__content--fork')[0].removeChild(cutleries.second.parent[0].lastElementChild);
+    document.getElementsByClassName('main__content--snackHight')[0].removeChild(snacks.first.parent[0].lastElementChild);
+    document.getElementsByClassName('main__content--snackMiddle')[0].removeChild(snacks.second.parent[0].lastElementChild);
+    document.getElementsByClassName('main__content--snackLower')[0].removeChild(snacks.third.parent[0].lastElementChild);
+
+    generationContent(initialContent);
+}
+
+export const createBntEvent = (btn, evnt, content, initialContent) => {
+    btn.addEventListener('click', () => evnt(content, initialContent))
+}
+
+export const resetEvent = (content, initialContent) => {
+    resetInitialContent(content, initialContent);
+}

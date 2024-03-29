@@ -1,6 +1,6 @@
 import { DISHES_SRC, SNACKS_SRC, CUTLERY_SRC, INITIAN_CONTENT } from './constants.js';
 import { modalEvent } from './modal.js';
-import { generationContent } from './generate.js';
+import { generationContent, createBntEvent, resetEvent } from './generate.js';
 
 const content = INITIAN_CONTENT;
 
@@ -10,14 +10,19 @@ let rightModalList = document.getElementsByClassName('main__content-dishes');
 let leftModal = document.getElementsByClassName('main__content-left-modal');
 let leftModalList = document.getElementsByClassName('main__content-snacks');
 
+let resetBtn = document.getElementsByClassName('footer__button--save');
+let generateBtn = document.getElementsByClassName('footer__button--text generate');
+
 generationContent(content); 
 
-modalEvent(content.plate.parent[0], 'main__content--right-module', rightModal[0], rightModalList[0], DISHES_SRC);
-modalEvent(content.cutleries.second.parent[0], 'main__content--right-module', rightModal[0], rightModalList[0], CUTLERY_SRC);
-modalEvent(content.cutleries.first.parent[0], 'main__content--left-module', leftModal[0], leftModalList[0], CUTLERY_SRC);
+modalEvent(content.plate.parent[0], 'main__content--right-module', rightModal[0], rightModalList[0], DISHES_SRC, content);
+modalEvent(content.cutleries.second.parent[0], 'main__content--right-module', rightModal[0], rightModalList[0], CUTLERY_SRC, content);
+modalEvent(content.cutleries.first.parent[0], 'main__content--left-module', leftModal[0], leftModalList[0], CUTLERY_SRC, content);
 modalEvent(content.snacks.first.parent[0], 'main__content--left-module', leftModal[0], leftModalList[0], SNACKS_SRC);
 modalEvent(content.snacks.second.parent[0], 'main__content--left-module', leftModal[0], leftModalList[0], SNACKS_SRC);
 modalEvent(content.snacks.third.parent[0], 'main__content--left-module', leftModal[0], leftModalList[0], SNACKS_SRC);
+
+createBntEvent(resetBtn[0], resetEvent, content, INITIAN_CONTENT);
 
 
 

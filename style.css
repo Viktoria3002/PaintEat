@@ -269,6 +269,7 @@ img {
     width: 549px;
     height: 161px;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .footer__button--save {
@@ -276,6 +277,8 @@ img {
     width: 550px;
     height: 153px;
     background-repeat: no-repeat;
+    cursor: pointer;
+
 }
 
 .footer__button--text {

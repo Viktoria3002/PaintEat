@@ -2,9 +2,9 @@ import { createLiElement } from './creaters.js';
 
 let openParant = null;
 
-export const modalEvent = (parant, className, modal, itemList, srcList) => {
+export const modalEvent = (parant, className, modal, itemList, srcList, content) => {
     parant.addEventListener('click', () => {
-        console.log(openParant, parant); 
+        console.log(content); 
         if (modal.classList.contains('hidden') && !(openParant === parant)) {
             modal.classList.remove('hidden');
         }
