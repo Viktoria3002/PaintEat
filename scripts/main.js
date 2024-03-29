@@ -10,8 +10,8 @@ let rightModalList = document.getElementsByClassName('main__content-dishes');
 let leftModal = document.getElementsByClassName('main__content-left-modal');
 let leftModalList = document.getElementsByClassName('main__content-snacks');
 
-let resetBtn = document.getElementsByClassName('footer__button--save');
-let generateBtn = document.getElementsByClassName('footer__button--generate');
+let resetBtn = document.getElementsByClassName('main-footer__button--save');
+let generateBtn = document.getElementsByClassName('main-footer__button--generate');
 
 generationContent(content); 
 

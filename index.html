@@ -3,22 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>PaintEat</title>
 </head>
 <body>
     <div class="container">
         <main class="main">
-            <div class="main__outside--circles">
-                <div class="main__outside--circle circle--orange"></div>
-                <div class="main__outside--circle circle--yellow"></div>
-                <div class="main__outside--circle circle--rectangle">
-                    <div class="circle--inside"></div>
-                </div>
-                <div class="main__outside--circle circle--green"></div>
-                <div class="main__outside--circle circle--white"></div>
-                <div class="main__outside--circle circle--whiteBlack"></div>
-            </div>
             <div class="main__creatFood--block">
                 <div class="main__header">
                     <div class="main__header--blocks">
@@ -30,7 +21,7 @@
                             <div class="main__header--circle">    
                             </div>
                             <div class="main__header--arrow">
-                                <img src="assets/img/backgroundHeader/Arrow (3).svg" alt="Arrow">    
+                                <img src="assets/img/backgroundHeader/arrow.svg" alt="Arrow">    
                             </div>
                         </div>
                         
@@ -60,13 +51,9 @@
                     </div>   
                 </div>
 
-                <div class="footer__buttons">
-                    <button class="footer__button--generate">
-                        <a class="footer__button--text generate" href="#">Generate</a>
-                    </button>
-                    <button class="footer__button--save">
-                        <a class="footer__button--text save" href="#">Reset</a>
-                    </button>
+                <div class="main-footer__buttons">   
+                    <button class="main-footer__button--generate">Generate</button>
+                    <button class="main-footer__button--save">Reset</button>
                 </div>   
 
                 <div class="main__content-left-modal hidden">
@@ -79,21 +66,8 @@
                     </ul>
                 </div>
             </div>
-            
-            <div class="main__outside--pallet">
-                <div class="main__outside--color black"></div>
-                <div class="main__outside--color orange"></div>
-                <div class="main__outside--color blue"></div>
-                <div class="main__outside--color white"></div>
-                <div class="main__outside--color yellow"></div>
-                <div class="main__outside--color brown"></div>
-            </div>
         </main>
-
-        <footer>
-            
-        </footer>
     </div>
 </body>
-<script type="module" src="scripts/javascripts.js"></script>
+<script type="module" src="scripts/main.js"></script>
 </html>
