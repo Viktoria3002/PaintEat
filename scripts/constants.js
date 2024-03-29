@@ -11,15 +11,15 @@ const dishesImgSrcList = [
 
 const forkImgSrcList = [
     "./assets/img/cutlery/fork/black_Fork.svg",
-    "./assets/img/cutlery/fork/orange_Fork.svg",
     "./assets/img/cutlery/fork/white_Fork.svg",
+    "./assets/img/cutlery/fork/orange_Fork.svg",
     "./assets/img/cutlery/fork/yellow_Fork.svg"
 ]
 
 const knifeImgSrcList = [
     "./assets/img/cutlery/knife/black_Knife.svg",
-    "./assets/img/cutlery/knife/orange_Knife.svg",
     "./assets/img/cutlery/knife/white_Knife.svg",
+    "./assets/img/cutlery/knife/orange_Knife.svg",
     "./assets/img/cutlery/knife/yellow_Knife.svg"
 ]
 
@@ -53,6 +53,9 @@ export const CLASS_NAMES = {
     SNACK: 'main__content--snack-btn',
     CUTLERY: 'main__content--cutlery-btn',
 }
+
+export const PARENT_CLASSES = ['main__content--plate', 'main__content--knife', 'main__content--fork', 'main__content--snackHight', 'main__content--snackMiddle', 'main__content--snackLower'];
+export const CHILD_CLASSES = ['main__content--dish', 'main__content--imgFork', 'main__content--imgKnife', 'main__content--snackHight-img', 'main__content--imgSnackMiddle-img', 'main__content--snackLower-img'];
 
 export const DISHES_SRC = {
     imgs: [...dishesImgSrcList],

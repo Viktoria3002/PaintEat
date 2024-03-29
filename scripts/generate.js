@@ -23,7 +23,7 @@ export const generationContent = (content) => {
 
 export const resetInitialContent = (content) => {
     cleanField(content);
-    generationContent(JSON.parse(JSON.stringify(INITIAN_CONTENT)));
+    generationContent(INITIAN_CONTENT);
 }
 
 export const generationRandomContent = (content) => {
