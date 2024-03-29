@@ -67,3 +67,15 @@ export const CUTLERY_SRC = {
     type: 'CUTLERY',
 };
 
+const INITIAN_CONTENT = {
+    plate: './assets/img/dish/dish_3.svg',
+    cutleries: {
+        first: './assets/img/cutlery/fork/black_Fork.svg',
+        second: './assets/img/cutlery/knife/black_Knife.svg',
+    },
+    snacks: {
+        first: './assets/img/snacks/fruits/fruit_2.svg',
+        second: './assets/img/snacks/fruits/leaf_2.svg',
+        third: './assets/img/snacks/fruits/fruit_2.svg',
+    },
+}
