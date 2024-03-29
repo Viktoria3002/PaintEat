@@ -67,15 +67,33 @@ export const CUTLERY_SRC = {
     type: 'CUTLERY',
 };
 
-const INITIAN_CONTENT = {
-    plate: './assets/img/dish/dish_3.svg',
+export const INITIAN_CONTENT = {
+    plate: {
+        childSrc: './assets/img/dish/dish_3.svg',
+        parent: null,
+    },
     cutleries: {
-        first: './assets/img/cutlery/fork/black_Fork.svg',
-        second: './assets/img/cutlery/knife/black_Knife.svg',
+        first: {
+            childSrc: './assets/img/cutlery/fork/black_Fork.svg',
+            parent: null,
+        },
+        second:  {
+            childSrc: './assets/img/cutlery/knife/black_Knife.svg',
+            parent: null,
+        },
     },
     snacks: {
-        first: './assets/img/snacks/fruits/fruit_2.svg',
-        second: './assets/img/snacks/fruits/leaf_2.svg',
-        third: './assets/img/snacks/fruits/fruit_2.svg',
+        first: {
+            childSrc: './assets/img/snacks/fruits/fruit_2.svg',
+            parent: null,
+        },
+        second: {
+            childSrc: './assets/img/snacks/leafs/leaf_2.svg',
+            parent: null,
+        },
+        third: {
+            childSrc: './assets/img/snacks/fruits/fruit_2.svg',
+            parent: null,
+        },
     },
 }

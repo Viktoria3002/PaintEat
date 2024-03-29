@@ -115,18 +115,21 @@ img {
 .main__content--snackLower {
     width: 150px;
     height: 150px;
+    cursor: pointer;
 }
 
 .main__content--snackMiddle {
     width: 165px;
     height: 117px;
+    cursor: pointer;
+
 }
 
 .main__content--plate {
     width: 490px;
     height: 480px;
     position: relative;
-    cursor: alias;
+    cursor: pointer;
 }
 
 .main__content--snacks {
