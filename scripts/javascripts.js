@@ -1,8 +1,8 @@
 import { DISHES_SRC, SNACKS_SRC, CUTLERY_SRC, INITIAN_CONTENT } from './constants.js';
 import { modalEvent } from './modal.js';
-import { generationContent, createBntEvent, resetEvent } from './generate.js';
+import { generationContent, generationRandomBtnEvent, createBntEvent, resetBtnEvent } from './generate.js';
 
-const content = INITIAN_CONTENT;
+const content = JSON.parse(JSON.stringify(INITIAN_CONTENT));
 
 let rightModal = document.getElementsByClassName('main__content-right-modal');
 let rightModalList = document.getElementsByClassName('main__content-dishes');
@@ -22,7 +22,7 @@ modalEvent(content.snacks.first.parent[0], 'main__content--left-module', leftMod
 modalEvent(content.snacks.second.parent[0], 'main__content--left-module', leftModal[0], leftModalList[0], SNACKS_SRC);
 modalEvent(content.snacks.third.parent[0], 'main__content--left-module', leftModal[0], leftModalList[0], SNACKS_SRC);
 
-createBntEvent(resetBtn[0], resetEvent, content, INITIAN_CONTENT);
-
+createBntEvent(resetBtn[0], resetBtnEvent, content);
+createBntEvent(generateBtn[0], generationRandomBtnEvent, content);
 
 
