@@ -11,7 +11,7 @@ let leftModal = document.getElementsByClassName('main__content-left-modal');
 let leftModalList = document.getElementsByClassName('main__content-snacks');
 
 let resetBtn = document.getElementsByClassName('footer__button--save');
-let generateBtn = document.getElementsByClassName('footer__button--text generate');
+let generateBtn = document.getElementsByClassName('footer__button--generate');
 
 generationContent(content); 
 
